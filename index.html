@@ -8,8 +8,12 @@
 		<title></title>
 
 		<link type="text/css" rel="stylesheet" href="styles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Arvo|Raleway" rel="stylesheet">
+		<!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">-->
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv-printshiv.min.js"></script>
@@ -18,8 +22,64 @@
 	</head>
 
 	<body>
+		<button type="button" class="menu-toggle"></button>
 
+		<header>
+			<img class="logo" src="images/congo-logo.png">
 
+			<nav class="desktop-nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#news">News</a></li>
+				<ul>
+			</nav>
+
+			<nav class="mobile-menu">
+				<ul class="menu">
+					<a href="#home"><li data-text="Home">Home</li></a>
+					<a href="#about"><li data-text="About">About</li></a>
+					<a href="#gallery"><li data-text="Gallery">Gallery</li></a>
+					<a href="#news"><li data-text="News">News</li></a>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id="page1">
+			  <a id="home" class="smooth"></a>
+					<div class="parallax_img" id="img1"></div>
+			</div>
+
+			<div id="page2">
+			  <a id="about" class="smooth"></a>
+				<h1>Congo, an Unexpected Artist</h1>
+				<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/uvzGV3LnWIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+				<section>
+					<p class="speech-bubble">“I’m the only artist in history that’s been outsold by his pet” - <b>Desmond Morris</b></p>
+					<img class="quote-pic" src="images/quote-pic.png">
+				</section>
+			</div>
+
+			<div id="page3">
+			  <a id="gallery" class="smooth"></a>
+			    Gallery page content goes here.
+			</div>
+
+			<div id="page3">
+				<a id="news" class="smooth"></a>
+					News page content goes here.
+			</div>
+		</main>
+
+		<footer>
+		</footer>
+
+		<script src="js/hamburger.js"></script>
+		<script src="js/parallax.js"></script>
+		<script src="js/smoothscroll.js"></script>
 	</body>
 
 </html>
