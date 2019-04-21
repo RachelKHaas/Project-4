@@ -14,6 +14,8 @@ header {
 	padding: 0 2%;
 	background: #fff;
 	height: 128px;
+	position: fixed;
+  width: 100%;
 }
 
 section {
@@ -22,13 +24,14 @@ section {
 	align-items: center;
 	justify-content: center;
 	padding: 2%;
+	margin: 2% 0;
 }
 
 h1 {
-	/*font-family: 'Playfair Display', serif;*/
 	font-family: 'Arvo', serif;
 	text-align: center;
 	color: #272727;
+	margin: 2% 0;
 }
 
 p {
@@ -45,6 +48,67 @@ p {
   display: none;
 }
 
+.snip1189 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1189 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1189 li {
+  display: inline-block;
+  list-style: outside none none;
+}
+.snip1189 a {
+  padding: 0.5em 0.8em;
+  margin: 0.2em 0;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.snip1189 a:before,
+.snip1189 a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.snip1189 a:before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid #00aabb;
+  border-top: 3px solid #00aabb;
+  -webkit-transform: translate(100%, 50%);
+  transform: translate(100%, 50%);
+}
+.snip1189 a:after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #00aabb;
+  border-bottom: 3px solid #00aabb;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+.snip1189 a:hover,
+.snip1189 .current a {
+  color: #272727;
+}
+.snip1189 a:hover:before,
+.snip1189 .current a:before,
+.snip1189 a:hover:after,
+.snip1189 .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
 /*Home Page*/
 .parallax_img {
 	height: 500px;
@@ -56,11 +120,23 @@ p {
 }
 
 /*About Page*/
+.about {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+
 .video {
-  display: block;
-  margin: 2% auto;
-	width: 800px;
-  height: 450px;
+    display: block;
+    margin: 0 1% 2% 2%;
+    width: 800px;
+    flex: 2;
+    height: 450px;
+}
+
+.bio {
+    flex: 2;
+    margin: 0 2% 0 1%;
 }
 
 .quote-pic {
@@ -475,6 +551,24 @@ article {
 	  font-weight: bold;
 	  font-size: .8rem;
 		color: #272727;
+	}
+}
+
+/*980 Media Query*/
+@media (min-width: 980px) {
+	.about {
+	  flex-direction: row;
+		align-items: unset;
+		justify-content: center;
+	}
+
+	.video {
+		margin: 0 1% 0 2%;
+		max-width: 600px;
+	}
+
+	.bio {
+		max-width: 600px;
 	}
 }
 
