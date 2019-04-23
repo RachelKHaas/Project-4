@@ -26,7 +26,8 @@ section div {
 	padding: 2%;
 	margin: 2% auto;
 	flex-direction: column;
-	max-width: 900px;
+	max-width: none;
+	box-shadow: none;
 }
 
 h1 {
@@ -34,6 +35,10 @@ h1 {
 	text-align: center;
 	color: #272727;
 	margin: 2% 0;
+}
+
+h2 {
+	font-family: 'Arvo', serif;
 }
 
 p {
@@ -124,7 +129,7 @@ p {
 }
 
 /*About Page*/
-#page2, #page3 {
+#page2, #page3, #page4 {
 	padding-top: 40px;
 }
 
@@ -223,7 +228,7 @@ p.speech-bubble, p.speech-bubble2 {
 	transform: scale(1.1);
 }
 
-/*About Page*/
+/*Gallery Page*/
 #page3 {
 	background: rgba(0,0,0,.05);
 }
@@ -247,6 +252,79 @@ p.speech-bubble, p.speech-bubble2 {
 padding: 0 5% 40px 5%;
 	max-width: 1200px;
 }
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-bottom
+ * ----------------------------------------
+ */
+ .flip-horizontal-bottom:hover {
+ 	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+ 	        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+ }
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+
+/*News Page*/
+.preview {
+	max-width: none;
+	background: rgba(0,0,0,.05);
+	margin: 2% auto;
+	padding: 2%;
+	display: flex;
+	align-items: center;
+	box-shadow: none;
+	flex-direction: column;
+}
+
+.preview a {
+    text-decoration: none;
+    font-style: italic;
+		color: #272727;
+}
+
+.preview a:hover {
+    font-weight: bold;
+}
+
+.preview-image {
+    width: 100%;
+    margin: 0 4% 0 0;
+}
+
+.preview img {
+    width: 100%;
+		margin: 0 2% 2% 2%;
+}
+
+.preview-text {
+    margin: 0 2%;
+}
+
+.preview-text p {
+    margin: 2% 0;
+}
+
 /*Hamburger Menu*/
 .hamburger{
   background:none;
@@ -337,6 +415,23 @@ a{color:#336699;}
 	.logo {
 		margin: 0;
 	}
+
+	.preview {
+		flex-direction: row;
+}
+
+.preview-text {
+		width: 60%;
+		margin: 0;
+}
+
+.preview-image {
+    width: 40%;
+	}
+
+.preview img {
+	margin: 0;
+}
 }
 
 /*980 Media Query*/
@@ -356,6 +451,7 @@ a{color:#336699;}
     display: flex;
     align-items: center;
 		box-shadow: 0 10px 20px rgba(0,0,0,.05);
+		max-width: 900px;
 }
 
 	.speech-bubble {
@@ -417,10 +513,15 @@ a{color:#336699;}
 		max-width: 600px;
 		margin:	0 2% 0 1%;
 	}
+
+	.preview {
+		max-width: 900px;
+		box-shadow: 0 10px 20px rgba(0,0,0,.05);
+	}
 }
 /*1024px Media Query*/
 @media (min-width: 1024px) {
-#page2, #page3 {
+#page2, #page3, #page4 {
     padding-top: 100px;
 }
 
